@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Open+Sans">
+</head>
+<body>
+    <nav>
+        <div class="desktop-navigation">
+            <div class="desktop-navigation-logo">
+                <h3>Smooth</h3>
+            </div>
+            <div class="desktop-navigation-menu">
+                <ul>
+                    <li>
+                        <a href="#">About us</a>
+                    </li>
+                    <li>
+                        <a href="#">Menu</a>
+                    </li>
+                    <li>
+                        <a href="#">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="#">Reservations</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="landing-page">
+        <div class="decoration-one"></div>
+        <div class="decoration-two"></div>
+        <div class="decoration-three"></div>
+        <div class="landing-page-content">
+                <h1>Welcome to the Smooth Restaurant</h1>
+                <p>Amaze your taste buds with one of our house specials</p>
+                <a href="#">Make a reservation</a>
+        </div>
+        <div class="landing-page-image">
+            <div class="landing-page-image-content">
+                <div class="landing-page-image-content-decoration"></div>
+                <img src="images/landing-image.jpg" alt="Restaurant Image">
+            </div>
+        </div>
+    </section>
+    <section class="about-us">
+        <div class="about-us-header">
+            <h2>About us</h2>
+        </div>
+        <div class="about-us-paragraph">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt consequatur autem provident porro earum est omnis! Aspernatur facilis, nam amet commodi similique saepe nostrum odit. Dicta ab provident alias dignissimos a enim? Illum corrupti qui commodi quisquam voluptatum rerum enim, similique praesentium ex nostrum? Ipsa delectus facere ratione? Ducimus blanditiis deserunt nisi repudiandae, dolorem, facere odit tenetur deleniti repellendus in tempore suscipit, ea libero architecto. Corrupti dolorum delectus consequuntur beatae rem ex neque. Eum cupiditate in dolorum temporibus eligendi? Voluptate, optio quibusdam odit itaque laborum tenetur obcaecati dicta quas exercitationem nesciunt sapiente aperiam perspiciatis sunt ex tempora eius consectetur neque nisi nihil iste! Autem praesentium aliquam earum, magnam pariatur nostrum ab nulla ex neque cum sunt sequi ullam ea voluptatem repellat architecto omnis nobis repudiandae non. Tempora veniam eligendi temporibus minima dolorem, incidunt necessitatibus, assumenda eius corporis neque vero iusto. Aliquid dolorem, consequatur ullam ea saepe distinctio odit nesciunt atque.</p>
+        </div>
+        <div class="about-us-slideshow">
+            <div class="about-us-slideshow-div" id="slideshowDiv"></div>
+        </div>
+        <div class="about-us-decoration-one"></div>
+    </section>
+    <section class="menu">
+        <div class="menu-header">
+            <h2>Menu</h2>
+        </div>
+        <div class="menu-navigation">
+            <div class="menu-navigation-choice" id="mainMenu">
+                <div class="menu-navigation-choice-food">
+                    <i class="fas fa-utensils" id="displayFood"></i>
+                    <h4>Food</h4>
+                </div>
+                <div class="menu-navigation-choice-drinks">
+                    <i class="fas fa-glass-cheers" id="displayDrinks"></i>
+                    <h4>Drinks</h4>
+                </div>
+            </div>
+            <div class="menu-navigation-food" id="foodMenu">
+                <div class="menu-navigation-food-undo">
+                    <i class="fas fa-undo" id="foodBackMain"></i>
+                    <h4>Go back</h4>
+                </div>
+                <div class="menu-navigation-food-burgers">
+                    <i class="fas fa-hamburger" id="displayHamburger"></i>
+                    <h4>Burgers</h4>
+                </div>
+                <div class="menu-navigation-food-pizza">
+                    <i class="fas fa-pizza-slice" id="displayPizza"></i>
+                    <h4>Pizza</h4>
+                </div>
+                <div class="menu-navigation-food-house-specials">
+                    <i class="fas fa-star" id="displayHouseSpecials"></i>
+                    <h4>House Specials</h4>
+                </div>
+                <div class="menu-navigation-food-meat">
+                    <i class="fas fa-drumstick-bite" id="displayMeat"></i>
+                    <h4>Meat</h4>
+                </div>
+            </div>
+            <div class="menu-navigation-drinks" id="drinksMenu">
+                <div class="menu-navigation-drinks-undo">
+                    <i class="fas fa-undo" id="drinksBackMain"></i>
+                    <h4>Go back</h4>
+                </div>
+                <div class="menu-navigation-drinks-coffee">
+                    <i class="fas fa-coffee" id="displayCoffee"></i>
+                    <h4>Coffee</h4>
+                </div>
+                <div class="menu-navigation-drinks-beer">
+                    <i class="fas fa-beer" id="displayBeer"></i>
+                    <h4>Beer</h4>
+                </div>
+                <div class="menu-navigation-drinks-wine">
+                    <i class="fas fa-wine-glass-alt" id="displayWine"></i>
+                    <h4>Wine</h4>
+                </div>
+                <div class="menu-navigation-drinks-cocktails">
+                    <i class="fas fa-glass-martini" id="displayCocktails"></i>
+                    <h4>Cocktails</h4>
+                </div>
+                <div class="menu-navigation-drinks-hard">
+                    <i class="fas fa-glass-whiskey" id="displayHardLiquor"></i>
+                    <h4>Hard liquor</h4>
+                </div>
+            </div>
+        </div>
+        <div class="menu-items">
+            <div class="menu-items-house-specials" id="houseSpecials">
+                <div class="menu-items-house-specials-burek">
+                    <div class="menu-items-house-specials-burek-content">
+                        <h4>Burek</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-burek-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-house-specials-sirnica">
+                    <div class="menu-items-house-specials-sirnica-content">
+                        <h4>Sirnica</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-sirnica-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-house-specials-zeljanica">
+                    <div class="menu-items-house-specials-zeljanica-content">
+                        <h4>Zeljanica</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-zeljanica-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-house-specials-bamije">
+                    <div class="menu-items-house-specials-bamije-content">
+                        <h4>Bamije</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-burek-price">
+                        <h4>$15.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-house-specials-salmon">
+                    <div class="menu-items-house-specials-salmon-content">
+                        <h4>Salmon</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-salmon-price">
+                        <h4>$19.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-house-specials-cevapcici">
+                    <div class="menu-items-house-specials-cevapcici-content">
+                        <h4>Cevapcici</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-cevapcici-price">
+                        <h4>$19.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-house-specials-baklava">
+                    <div class="menu-items-house-specials-baklava-content">
+                        <h4>Baklava</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-baklava-price">
+                        <h4>$6.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-house-specials-begova-soup">
+                    <div class="menu-items-house-specials-begova-soup-content">
+                        <h4>Begova Soup</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-begova-soup-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-house-specials-satarash">
+                    <div class="menu-items-house-specials-satarash-content">
+                        <h4>Satarash</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-satarash-price">
+                        <h4>$15.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-house-specials-bosanski-lonac">
+                    <div class="menu-items-house-specials-bosanski-lonac-content">
+                        <h4>Bosanski Lonac</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-bosanski-lonac-price">
+                        <h4>$19.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-house-specials-tarhana">
+                    <div class="menu-items-house-specials-tarhana-content">
+                        <h4>Tarhana </h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum nobis tempore doloribus pariatur eligendi minus dicta unde, natus magnam. Error earum dolore natus eum harum culpa, architecto sequi laudantium maiores!</p>
+                    </div>
+                    <div class="menu-items-house-specials-tarhana-price">
+                        <h4>$13.99</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-items-burgers" id="burgers">
+                <div class="menu-items-burgers-hamburger">
+                    <div class="menu-items-burgers-hamburger-content">
+                        <h4>Hamburger</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dicta dignissimos, quaerat rerum impedit, commodi quisquam odit omnis animi asperiores, rem nobis? Soluta autem commodi quae perspiciatis in possimus cupiditate!</p>
+                    </div>
+                    <div class="menu-items-burgers-hamburger-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-burgers-cheeseburger">
+                    <div class="menu-items-burgers-cheeseburger-content">
+                        <h4>Cheeseburger</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dicta dignissimos, quaerat rerum impedit, commodi quisquam odit omnis animi asperiores, rem nobis? Soluta autem commodi quae perspiciatis in possimus cupiditate!</p>
+                    </div>
+                    <div class="menu-items-burgers-cheeseburger-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-burgers-fish-burger">
+                    <div class="menu-items-burgers-fish-burger-content">
+                        <h4>Fish burger</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dicta dignissimos, quaerat rerum impedit, commodi quisquam odit omnis animi asperiores, rem nobis? Soluta autem commodi quae perspiciatis in possimus cupiditate!</p>
+                    </div>
+                    <div class="menu-items-burgers-fish-burger-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-burgers-vegan-burger">
+                    <div class="menu-items-burgers-vegan-burger-content">
+                        <h4>Vegan burger</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dicta dignissimos, quaerat rerum impedit, commodi quisquam odit omnis animi asperiores, rem nobis? Soluta autem commodi quae perspiciatis in possimus cupiditate!</p>
+                    </div>
+                    <div class="menu-items-burgers-vegan-burger-price">
+                        <h4>$12.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-burgers-double-hamburger">
+                    <div class="menu-items-burgers-double-hamburger-content">
+                        <h4>Double hamburger</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dicta dignissimos, quaerat rerum impedit, commodi quisquam odit omnis animi asperiores, rem nobis? Soluta autem commodi quae perspiciatis in possimus cupiditate!</p>
+                    </div>
+                    <div class="menu-items-burgers-double-hamburger-price">
+                        <h4>$15.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-burgers-double-cheeseburger">
+                    <div class="menu-items-burgers-double-cheeseburger-content">
+                        <h4>Double cheeseburger</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita dicta dignissimos, quaerat rerum impedit, commodi quisquam odit omnis animi asperiores, rem nobis? Soluta autem commodi quae perspiciatis in possimus cupiditate!</p>
+                    </div>
+                    <div class="menu-items-burgers-double-cheeseburger-price">
+                        <h4>$16.99</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-items-pizza" id="pizza">
+                <div class="menu-items-pizza-margherita">
+                    <div class="menu-items-pizza-margherita-content">
+                        <h4>Margherita</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam rerum dolore fuga voluptatibus eius iure cumque, a animi, quibusdam consequatur repellendus mollitia saepe officia minus maxime magni placeat! Quas.</p>
+                    </div>
+                    <div class="menu-items-pizza-margherita-price">
+                        <h4>$15.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-pizza-fungi">
+                    <div class="menu-items-pizza-fungi-content">
+                        <h4>Fungi</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam rerum dolore fuga voluptatibus eius iure cumque, a animi, quibusdam consequatur repellendus mollitia saepe officia minus maxime magni placeat! Quas.</p>
+                    </div>
+                    <div class="menu-items-pizza-fungi-price">
+                        <h4>$16.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-pizza-tono">
+                    <div class="menu-items-pizza-tono-content">
+                        <h4>Tono</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam rerum dolore fuga voluptatibus eius iure cumque, a animi, quibusdam consequatur repellendus mollitia saepe officia minus maxime magni placeat! Quas.</p>
+                    </div>
+                    <div class="menu-items-pizza-tono-price">
+                        <h4>$17.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-pizza-vegetariana">
+                    <div class="menu-items-pizza-vegetariana-content">
+                        <h4>Vegetariana</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam rerum dolore fuga voluptatibus eius iure cumque, a animi, quibusdam consequatur repellendus mollitia saepe officia minus maxime magni placeat! Quas.</p>
+                    </div>
+                    <div class="menu-items-pizza-vegetariana-price">
+                        <h4>$16.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-pizza-quatro-formagi">
+                    <div class="menu-items-pizza-quatro-formagi-content">
+                        <h4>Quatro formagi</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam rerum dolore fuga voluptatibus eius iure cumque, a animi, quibusdam consequatur repellendus mollitia saepe officia minus maxime magni placeat! Quas.</p>
+                    </div>
+                    <div class="menu-items-pizza-quatro-formagi-price">
+                        <h4>$16.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-pizza-italiana">
+                    <div class="menu-items-pizza-italiana-content">
+                        <h4>Italiana</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam rerum dolore fuga voluptatibus eius iure cumque, a animi, quibusdam consequatur repellendus mollitia saepe officia minus maxime magni placeat! Quas.</p>
+                    </div>
+                    <div class="menu-items-pizza-italiana-price">
+                        <h4>$16.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-pizza-balkan">
+                    <div class="menu-items-pizza-balkan-content">
+                        <h4>Balkan</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam rerum dolore fuga voluptatibus eius iure cumque, a animi, quibusdam consequatur repellendus mollitia saepe officia minus maxime magni placeat! Quas.</p>
+                    </div>
+                    <div class="menu-items-pizza-balkan-price">
+                        <h4>$17.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-pizza-salami">
+                    <div class="menu-items-pizza-salami-content">
+                        <h4>Salami</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magnam rerum dolore fuga voluptatibus eius iure cumque, a animi, quibusdam consequatur repellendus mollitia saepe officia minus maxime magni placeat! Quas.</p>
+                    </div>
+                    <div class="menu-items-pizza-salami-price">
+                        <h4>$16.99</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-items-meat" id="meat">
+                <div class="menu-items-meat-steak">
+                    <div class="menu-items-meat-steak-content">
+                        <h4>Steak</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellendus beatae minus architecto eius hic nesciunt amet pariatur, ut voluptatum quia consectetur. Maiores illum sit consequuntur sequi eos officia tenetur!</p>
+                    </div>
+                    <div class="menu-items-meat-steak-price">
+                        <h4>$30.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-meat-elk">
+                    <div class="menu-items-meat-elk-content">
+                        <h4>Elk meat</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellendus beatae minus architecto eius hic nesciunt amet pariatur, ut voluptatum quia consectetur. Maiores illum sit consequuntur sequi eos officia tenetur!</p>
+                    </div>
+                    <div class="menu-items-meat-elk-price">
+                        <h4>$50.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-meat-rabbit">
+                    <div class="menu-items-meat-rabbit-content">
+                        <h4>Rabbit meat</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellendus beatae minus architecto eius hic nesciunt amet pariatur, ut voluptatum quia consectetur. Maiores illum sit consequuntur sequi eos officia tenetur!</p>
+                    </div>
+                    <div class="menu-items-meat-rabbit-price">
+                        <h4>$50.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-meat-calf">
+                    <div class="menu-items-meat-calf-content">
+                        <h4>Calf meat</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellendus beatae minus architecto eius hic nesciunt amet pariatur, ut voluptatum quia consectetur. Maiores illum sit consequuntur sequi eos officia tenetur!</p>
+                    </div>
+                    <div class="menu-items-meat-calf-price">
+                        <h4>$35.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-meat-goat">
+                    <div class="menu-items-meat-goat-content">
+                        <h4>Goat meat</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellendus beatae minus architecto eius hic nesciunt amet pariatur, ut voluptatum quia consectetur. Maiores illum sit consequuntur sequi eos officia tenetur!</p>
+                    </div>
+                    <div class="menu-items-meat-goat-price">
+                        <h4>$30.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-meat-shark">
+                    <div class="menu-items-meat-shark-content">
+                        <h4>Shark meat</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellendus beatae minus architecto eius hic nesciunt amet pariatur, ut voluptatum quia consectetur. Maiores illum sit consequuntur sequi eos officia tenetur!</p>
+                    </div>
+                    <div class="menu-items-meat-shark-price">
+                        <h4>$120.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-meat-pork">
+                    <div class="menu-items-meat-pork-content">
+                        <h4>Pork</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellendus beatae minus architecto eius hic nesciunt amet pariatur, ut voluptatum quia consectetur. Maiores illum sit consequuntur sequi eos officia tenetur!</p>
+                    </div>
+                    <div class="menu-items-meat-pork-price">
+                        <h4>$30.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-meat-chicken">
+                    <div class="menu-items-meat-chicken-content">
+                        <h4>Chicken</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo repellendus beatae minus architecto eius hic nesciunt amet pariatur, ut voluptatum quia consectetur. Maiores illum sit consequuntur sequi eos officia tenetur!</p>
+                    </div>
+                    <div class="menu-items-meat-chicken-price">
+                        <h4>$25.99</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-items-coffee" id="coffee">
+                <div class="menu-items-coffee-espresso">
+                    <div class="menu-items-coffee-espresso-content">
+                        <h4>Espresso</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat qui reprehenderit unde repellendus, eveniet velit accusantium a, earum inventore voluptas eum in repudiandae fugit sint dolor, magnam et rerum consequuntur.</p>
+                    </div>
+                    <div class="menu-items-coffee-espresso-price">
+                        <h4>$2.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-coffee-espresso-milk">
+                    <div class="menu-items-coffee-espresso-milk-content">
+                        <h4>Espresso with milk</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat qui reprehenderit unde repellendus, eveniet velit accusantium a, earum inventore voluptas eum in repudiandae fugit sint dolor, magnam et rerum consequuntur.</p>
+                    </div>
+                    <div class="menu-items-coffee-espresso-milk-price">
+                        <h4>$3.50</h4>
+                    </div>
+                </div>
+                <div class="menu-items-coffee-turkish">
+                    <div class="menu-items-coffee-turkish-content">
+                        <h4>Turkish</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat qui reprehenderit unde repellendus, eveniet velit accusantium a, earum inventore voluptas eum in repudiandae fugit sint dolor, magnam et rerum consequuntur.</p>
+                    </div>
+                    <div class="menu-items-coffee-turkish-price">
+                        <h4>$2.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-coffee-ness">
+                    <div class="menu-items-coffee-ness-content">
+                        <h4>Ness</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat qui reprehenderit unde repellendus, eveniet velit accusantium a, earum inventore voluptas eum in repudiandae fugit sint dolor, magnam et rerum consequuntur.</p>
+                    </div>
+                    <div class="menu-items-coffee-ness-price">
+                        <h4>$2.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-coffee-longi">
+                    <div class="menu-items-coffee-longi-content">
+                        <h4>Longi</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat qui reprehenderit unde repellendus, eveniet velit accusantium a, earum inventore voluptas eum in repudiandae fugit sint dolor, magnam et rerum consequuntur.</p>
+                    </div>
+                    <div class="menu-items-coffee-longi-price">
+                        <h4>$2.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-coffee-latte">
+                    <div class="menu-items-coffee-latte-content">
+                        <h4>Latte</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat qui reprehenderit unde repellendus, eveniet velit accusantium a, earum inventore voluptas eum in repudiandae fugit sint dolor, magnam et rerum consequuntur.</p>
+                    </div>
+                    <div class="menu-items-coffee-latte-price">
+                        <h4>$2.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-coffee-machiato">
+                    <div class="menu-items-coffee-machiato-content">
+                        <h4>Machiato</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat qui reprehenderit unde repellendus, eveniet velit accusantium a, earum inventore voluptas eum in repudiandae fugit sint dolor, magnam et rerum consequuntur.</p>
+                    </div>
+                    <div class="menu-items-coffee-machiato-price">
+                        <h4>$2.99</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-items-beer" id="beer">
+                <div class="menu-items-beer-heineken">
+                    <div class="menu-items-beer-heineken-content">
+                        <h4>Heineken</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quisquam nihil deserunt, accusantium dolores, qui praesentium doloremque alias eos vero ipsam adipisci voluptate sit cupiditate possimus mollitia eligendi ipsum? Molestiae.</p>
+                    </div>
+                    <div class="menu-items-beer-heineken-price">
+                        <h4>$7.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-beer-corona">
+                    <div class="menu-items-beer-corona-content">
+                        <h4>Corona</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quisquam nihil deserunt, accusantium dolores, qui praesentium doloremque alias eos vero ipsam adipisci voluptate sit cupiditate possimus mollitia eligendi ipsum? Molestiae.</p>
+                    </div>
+                    <div class="menu-items-beer-corona-price">
+                        <h4>$7.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-beer-guinness">
+                    <div class="menu-items-beer-guinness-content">
+                        <h4>Guinness</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quisquam nihil deserunt, accusantium dolores, qui praesentium doloremque alias eos vero ipsam adipisci voluptate sit cupiditate possimus mollitia eligendi ipsum? Molestiae.</p>
+                    </div>
+                    <div class="menu-items-beer-guinness-price">
+                        <h4>$8.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-beer-budweiser">
+                    <div class="menu-items-beer-budweiser-content">
+                        <h4>Budweiser</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quisquam nihil deserunt, accusantium dolores, qui praesentium doloremque alias eos vero ipsam adipisci voluptate sit cupiditate possimus mollitia eligendi ipsum? Molestiae.</p>
+                    </div>
+                    <div class="menu-items-beer-budweiser-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-beer-bud-light">
+                    <div class="menu-items-beer-bud-light-content">
+                        <h4>Bud light</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quisquam nihil deserunt, accusantium dolores, qui praesentium doloremque alias eos vero ipsam adipisci voluptate sit cupiditate possimus mollitia eligendi ipsum? Molestiae.</p>
+                    </div>
+                    <div class="menu-items-beer-bud-light-price">
+                        <h4>$7.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-beer-becks">
+                    <div class="menu-items-beer-becks-content">
+                        <h4>Becks</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quisquam nihil deserunt, accusantium dolores, qui praesentium doloremque alias eos vero ipsam adipisci voluptate sit cupiditate possimus mollitia eligendi ipsum? Molestiae.</p>
+                    </div>
+                    <div class="menu-items-beer-becks-price">
+                        <h4>$7.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-beer-paulaner">
+                    <div class="menu-items-beer-paulaner-content">
+                        <h4>Paulaner</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quisquam nihil deserunt, accusantium dolores, qui praesentium doloremque alias eos vero ipsam adipisci voluptate sit cupiditate possimus mollitia eligendi ipsum? Molestiae.</p>
+                    </div>
+                    <div class="menu-items-beer-paulaner-price">
+                        <h4>$13.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-beer-paulaner-dark">
+                    <div class="menu-items-beer-paulaner-dark-content">
+                        <h4>Paulaner dark</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quisquam nihil deserunt, accusantium dolores, qui praesentium doloremque alias eos vero ipsam adipisci voluptate sit cupiditate possimus mollitia eligendi ipsum? Molestiae.</p>
+                    </div>
+                    <div class="menu-items-beer-paulaner-dark-price">
+                        <h4>$15.99</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-items-wine" id="wine">
+                <div class="menu-items-wine-casella">
+                    <div class="menu-items-wine-casella-content">
+                        <h4>Casella</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus laborum corporis ab ipsam consectetur voluptatum deleniti aperiam, sapiente quos minima, placeat natus magni nam aliquam iusto id sunt dolor optio.</p>
+                    </div>
+                    <div class="menu-items-wine-casella-price">
+                        <h4>$50.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-wine-changyu">
+                    <div class="menu-items-wine-changyu-content">
+                        <h4>Changyu</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus laborum corporis ab ipsam consectetur voluptatum deleniti aperiam, sapiente quos minima, placeat natus magni nam aliquam iusto id sunt dolor optio.</p>
+                    </div>
+                    <div class="menu-items-wine-changyu-price">
+                        <h4>$50.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-wine-robert-mondavi">
+                    <div class="menu-items-wine-robert-mondavi-content">
+                        <h4>Robert Mondavi</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus laborum corporis ab ipsam consectetur voluptatum deleniti aperiam, sapiente quos minima, placeat natus magni nam aliquam iusto id sunt dolor optio.</p>
+                    </div>
+                    <div class="menu-items-wine-robert-mondavi-price">
+                        <h4>$70.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-wine-trinchero">
+                    <div class="menu-items-wine-trinchero-content">
+                        <h4>Trinchero</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus laborum corporis ab ipsam consectetur voluptatum deleniti aperiam, sapiente quos minima, placeat natus magni nam aliquam iusto id sunt dolor optio.</p>
+                    </div>
+                    <div class="menu-items-wine-trinchero-price">
+                        <h4>$80.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-wine-hardys">
+                    <div class="menu-items-wine-hardys-content">
+                        <h4>Hardys</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus laborum corporis ab ipsam consectetur voluptatum deleniti aperiam, sapiente quos minima, placeat natus magni nam aliquam iusto id sunt dolor optio.</p>
+                    </div>
+                    <div class="menu-items-wine-hardys-price">
+                        <h4>$80.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-wine-diablo">
+                    <div class="menu-items-wine-diablo-content">
+                        <h4>Diablo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus laborum corporis ab ipsam consectetur voluptatum deleniti aperiam, sapiente quos minima, placeat natus magni nam aliquam iusto id sunt dolor optio.</p>
+                    </div>
+                    <div class="menu-items-wine-diablo-price">
+                        <h4>$113.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-wine-echo">
+                    <div class="menu-items-wine-echo-content">
+                        <h4>Echo</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus laborum corporis ab ipsam consectetur voluptatum deleniti aperiam, sapiente quos minima, placeat natus magni nam aliquam iusto id sunt dolor optio.</p>
+                    </div>
+                    <div class="menu-items-wine-echo-price">
+                        <h4>$50.99</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-items-cocktails" id="cocktails">
+                <div class="menu-items-cocktails-dry-martini">
+                    <div class="menu-items-cocktails-dry-martini-content">
+                        <h4>Dry martini</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corrupti dolor in, sed commodi accusantium voluptatibus officia neque, totam reiciendis eaque. Et voluptatum laboriosam dignissimos in ut saepe molestias? Laudantium?</p>
+                    </div>
+                    <div class="menu-items-cocktails-dry-martini-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-cocktails-margarita">
+                    <div class="menu-items-cocktails-margarita-content">
+                        <h4>Margarita</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corrupti dolor in, sed commodi accusantium voluptatibus officia neque, totam reiciendis eaque. Et voluptatum laboriosam dignissimos in ut saepe molestias? Laudantium?</p>
+                    </div>
+                    <div class="menu-items-cocktails-margarita-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-cocktails-manhattan">
+                    <div class="menu-items-cocktails-manhattan-content">
+                        <h4>Manhattan</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corrupti dolor in, sed commodi accusantium voluptatibus officia neque, totam reiciendis eaque. Et voluptatum laboriosam dignissimos in ut saepe molestias? Laudantium?</p>
+                    </div>
+                    <div class="menu-items-cocktails-manhattan-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-cocktails-carapinia">
+                    <div class="menu-items-cocktails-carapinia-content">
+                        <h4>Carapinia</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corrupti dolor in, sed commodi accusantium voluptatibus officia neque, totam reiciendis eaque. Et voluptatum laboriosam dignissimos in ut saepe molestias? Laudantium?</p>
+                    </div>
+                    <div class="menu-items-cocktails-carapinia-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-cocktails-moscow-mule">
+                    <div class="menu-items-cocktails-moscow-mule-content">
+                        <h4>Moscow mule</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corrupti dolor in, sed commodi accusantium voluptatibus officia neque, totam reiciendis eaque. Et voluptatum laboriosam dignissimos in ut saepe molestias? Laudantium?</p>
+                    </div>
+                    <div class="menu-items-cocktails-moscow-mule-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-cocktails-aviation">
+                    <div class="menu-items-cocktails-aviation-content">
+                        <h4>Aviation</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corrupti dolor in, sed commodi accusantium voluptatibus officia neque, totam reiciendis eaque. Et voluptatum laboriosam dignissimos in ut saepe molestias? Laudantium?</p>
+                    </div>
+                    <div class="menu-items-cocktails-aviation-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-cocktails-cosmopolitan">
+                    <div class="menu-items-cocktails-cosmopolitan-content">
+                        <h4>Cosmopolitan</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corrupti dolor in, sed commodi accusantium voluptatibus officia neque, totam reiciendis eaque. Et voluptatum laboriosam dignissimos in ut saepe molestias? Laudantium?</p>
+                    </div>
+                    <div class="menu-items-cocktails-cosmopolitan-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-cocktails-amaretto">
+                    <div class="menu-items-cocktails-amaretto-content">
+                        <h4>Amaretto</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corrupti dolor in, sed commodi accusantium voluptatibus officia neque, totam reiciendis eaque. Et voluptatum laboriosam dignissimos in ut saepe molestias? Laudantium?</p>
+                    </div>
+                    <div class="menu-items-cocktails-amaretto-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-cocktails-vodka-martini">
+                    <div class="menu-items-cocktails-vodka-martini-content">
+                        <h4>Vodka martini</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia corrupti dolor in, sed commodi accusantium voluptatibus officia neque, totam reiciendis eaque. Et voluptatum laboriosam dignissimos in ut saepe molestias? Laudantium?</p>
+                    </div>
+                    <div class="menu-items-cocktails-vodka-martini-price">
+                        <h4>$9.99</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-items-hard-liquor" id="hardLiquor">
+                <div class="menu-items-hard-liquor-vodka">
+                    <div class="menu-items-hard-liquor-vodka-content">
+                        <h4>Vodka</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi reprehenderit tempore repellat. Quisquam sequi aliquam autem. Quasi quod tempora vero modi laborum rem iure non voluptate voluptatibus. Quo, aliquid.</p>
+                    </div>
+                    <div class="menu-items-hard-liquor-vodka-price">
+                        <h4>$5.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-hard-liquor-gin">
+                    <div class="menu-items-hard-liquor-gin-content">
+                        <h4>Gin</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi reprehenderit tempore repellat. Quisquam sequi aliquam autem. Quasi quod tempora vero modi laborum rem iure non voluptate voluptatibus. Quo, aliquid.</p>
+                    </div>
+                    <div class="menu-items-hard-liquor-gin-price">
+                        <h4>$5.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-hard-liquor-rakija">
+                    <div class="menu-items-hard-liquor-rakija-content">
+                        <h4>Rakija</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi reprehenderit tempore repellat. Quisquam sequi aliquam autem. Quasi quod tempora vero modi laborum rem iure non voluptate voluptatibus. Quo, aliquid.</p>
+                    </div>
+                    <div class="menu-items-hard-liquor-rakija-price">
+                        <h4>$5.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-hard-liquor-whiskey">
+                    <div class="menu-items-hard-liquor-whiskey-content">
+                        <h4>Whiskey</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi reprehenderit tempore repellat. Quisquam sequi aliquam autem. Quasi quod tempora vero modi laborum rem iure non voluptate voluptatibus. Quo, aliquid.</p>
+                    </div>
+                    <div class="menu-items-hard-liquor-whiskey-price">
+                        <h4>$5.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-hard-liquor-jagermeister">
+                    <div class="menu-items-hard-liquor-jagermeister-content">
+                        <h4>Jagermeister</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi reprehenderit tempore repellat. Quisquam sequi aliquam autem. Quasi quod tempora vero modi laborum rem iure non voluptate voluptatibus. Quo, aliquid.</p>
+                    </div>
+                    <div class="menu-items-hard-liquor-jagermeister-price">
+                        <h4>$5.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-hard-liquor-malibu">
+                    <div class="menu-items-hard-liquor-malibu-content">
+                        <h4>Malibu</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi reprehenderit tempore repellat. Quisquam sequi aliquam autem. Quasi quod tempora vero modi laborum rem iure non voluptate voluptatibus. Quo, aliquid.</p>
+                    </div>
+                    <div class="menu-items-hard-liquor-malibu-price">
+                        <h4>$5.99</h4>
+                    </div>
+                </div>
+                <div class="menu-items-hard-liquor-bacardi">
+                    <div class="menu-items-hard-liquor-bacardi-content">
+                        <h4>Bacardi</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi reprehenderit tempore repellat. Quisquam sequi aliquam autem. Quasi quod tempora vero modi laborum rem iure non voluptate voluptatibus. Quo, aliquid.</p>
+                    </div>
+                    <div class="menu-items-hard-liquor-bacardi-price">
+                        <h4>$5.99</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="gallery-content">
+            <div class="gallery-content-photo" id="galleryOne"></div>
+            <div class="gallery-content-photo" id="galleryTwo"></div>
+            <div class="gallery-content-photo" id="galleryThree"></div>
+            <div class="gallery-content-photo" id="galleryFour"></div>
+            <div class="gallery-content-photo" id="galleryFive"></div>
+            <div class="gallery-content-photo" id="gallerySix"></div>
+        </div>
+    </section>
+    <section class="reservations">
+        <div class="reservations-decoration-one"></div>
+        <div class="reservations-decoration-two"></div>
+        <div class="reservations-firstname-help" id="firstnameHelp">
+            <p>Maximum length 30 characters</p>
+        </div>
+        <div class="reservations-lastname-help" id="lastnameHelp">
+            <p>Maximum length 30 characters</p>
+        </div>
+        <div class="reservations-adults-help" id="adultsHelp">
+            <p>Number of adults at the table</p>
+        </div>
+        <div class="reservations-children-help" id="childrenHelp">
+            <p>Number of children at the table</p>
+        </div>
+        <div class="reservations-time-help" id="timeHelp">
+            <p>Enter the hour of the day <br> ( only round numbers ) </p>
+        </div>
+        <div class="reservations-comments-help" id="commentsHelp">
+            <p>If you have any special requests, wishes we would love to know. <br> Please also enter known alergies.</p>
+        </div>
+        <div class="reservations-header">
+            <h2>Reservations</h2>
+        </div>
+        <form id="reservationForm">
+            <div class="form-fullname">
+                <div class="form-fullname-firstname">
+                    <label for="reservationFirstName">First name</label>
+                    <input type="text" id="reservationFirstName">
+                </div>
+                <div class="form-fullname-lastname">
+                    <label for="reservationLastName">Last name</label>
+                    <input type="text" id="reservationLastName">
+                </div>
+            </div>
+            <div class="form-more-information">
+                <div class="form-more-information-adults">
+                    <label for="reservationNumberOfAdults">Adults</label>
+                    <input type="number" id="reservationNumberOfAdults">
+                </div>
+                <div class="form-more-information-children">
+                    <label for="reservationNumberOfChildren">Children</label>
+                    <input type="number" id="reservationNumberOfChildren">
+                </div>
+            </div>
+            <div class="form-time-date">
+                <div class="form-time-date-time">
+                    <label for="reservationTime">Time</label>
+                    <input type="number" id="reservationTime">
+                </div>
+                <div class="form-time-date-date">
+                    <label for="reservationDate">Date</label>
+                    <input type="date" id="reservationDate">
+                </div>
+            </div>
+            <div class="form-comment">
+                <div class="form-comment-textarea">
+                    <label for="reservationComment">Comments</label>
+                    <textarea  id="reservationComment" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="form-finish">
+                <div class="form-finish-button">
+                    <input type="submit" value="Confirm reservation" id="reservationConfirmButton">
+                </div>
+            </div>
+        </form>
+        <div class="post-reservation" id="postReservation">
+            <div class="post-reservation-content">
+                <div class="post-reservation-content-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="post-reservation-content-message">
+                    <h4>Reservation complete</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="contact-header">
+            <h2>Contact</h2>
+        </div>
+        <form id="contactForm">
+            <div class="contact-form" id="contactFormFirstStep">
+                <div class="contact-form-firstname">
+                    <label for="contactFormFirstName">First name</label>
+                    <input type="text" id="contactFormFirstName">
+                </div>
+                <div class="contact-form-lastname">
+                    <label for="contactFormLastName">Last name</label>
+                    <input type="text" id="contactFormLastName">
+                </div>
+                <div class="contact-form-email">
+                    <label for="contactFormEmail">Email</label>
+                    <input type="email" id="contactFormEmail">
+                </div>
+                <div class="contact-form-continue">
+                    <button type="button" id="continueContactForm">Continue</button>
+                </div>
+            </div>
+            <div class="contact-comment" id="contactFormSeconndStep">
+                <div class="contact-comment-textarea">
+                    <label for="contactFormMessage">Your message</label>
+                    <textarea  id="contactFormMessage" cols="30" rows="10"></textarea>
+                </div>
+                <div class="contact-comment-finish">
+                    <input type="submit" value="Finish" id="finishContactForm">
+                </div>
+            </div>
+            <div class="contact-completed" id="contactFormThirdStep">
+                <div class="contact-completed-content">
+                    <div class="contact-completed-content-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="contact-completed-content-message">
+                        <h4>Thank you</h4>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d9620.879310716193!2d17.91099408244203!3d44.200793944528264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x475ee24131bb2fa7%3A0xb692ba8e366c72b0!2sBulevar%20Ezhera%20Eze%20Arnautovi%C4%87a%2C%20Zenica%2072000!3m2!1d44.2013865!2d17.9088653!5e0!3m2!1sen!2sba!4v1607225242849!5m2!1sen!2sba" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

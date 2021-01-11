@@ -1,0 +1,4154 @@
+$white: #ffffff;
+$medium-black: #354B58;
+$dark-black: #263844;
+$silver: #DDE6EB;
+$brown: #aa896b;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: $white;
+
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 7vh;
+        width: 100%;
+        z-index: 3;
+
+        .desktop-navigation{
+            height: 100%;
+            background: rgba(119, 86, 56, 0.85);
+            display: grid;
+            grid-template-columns: 40% auto;
+            align-items: center;
+            transition: ease-in-out;
+            transition-duration: 200ms;
+
+            &-logo{
+
+                h3{
+                    font-size: 3em;
+                    font-family: 'Tangerine';
+                    letter-spacing: 0.1em;
+                    margin-left: 2.05em;
+                    color: $white;
+                    padding-top: 0.2em;
+                }
+            }
+
+            &-menu{
+                height: 100%;
+
+                ul{
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-right: 1.7em;
+                    height: 100%;
+
+                    li{
+                        height: 100%;
+                        a{
+                            display: flex;
+                            align-items: center;
+                            height: 100%;
+                            text-decoration: none;
+                            font-size: 2em;
+                            letter-spacing: 0.03em;
+                            color: $white;
+                            font-weight: 550;
+                            padding-bottom: 0.3em;
+                            transition: ease-in-out;
+                            transition-duration: 200ms;
+                            padding: 0em 0.5em;
+                            font-family: 'Tangerine';
+                        }
+                        
+                        a:hover{
+                            background: darken($brown, 20%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+   .landing-page{
+       height: 100vh;
+       width: 100%;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+
+       .decoration-one{
+        position: absolute;
+        top: 15%;
+        // top: 22%;
+        border-radius: 50%;
+        left: 5%;
+        height: 50%;
+        // height: 36%;
+        width: 25%;
+        // width: 38%;
+        background: $brown;
+        background: lighten($brown, 42%);
+        z-index: -1;
+    }
+
+    .decoration-two{
+        position: absolute;
+        top: 85%;
+        left: 35%;
+        height: 10%;
+        width: 5%;
+        background: lighten($brown, 37%);
+        z-index: -1;
+        border-radius: 50%;
+    }
+
+    .decoration-three{
+        position: absolute;
+        top: 13%;
+        left: 50%;
+        height: 20%;
+        width: 10%;
+        background: lighten($silver, 6%);
+        background: lighten(gold, 45%);
+        z-index: -1;
+        border-radius: 50%;
+    }
+
+       &-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+            h1{
+                color: $medium-black;
+                color: $dark-black;
+                width: 80%;
+                font-size: 9em;
+                font-family: 'Tangerine';
+                animation-name: fadeIn;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+
+                @keyframes fadeIn{
+                    from{
+                        opacity: 0.5;
+                    }
+
+                    to{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            p{
+                margin-left: -1em;
+                color: $medium-black;
+                font-size: 1.7em;
+                animation-name: fadeIn;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+            }
+
+            a{
+                margin-left: -2em;
+                margin-top: 1.5em;
+                text-decoration: none;
+                border: 1px $dark-black solid;
+                border: 2px $silver solid;
+                padding: 0.8em;
+                font-size: 1.6em;
+                // border-radius: 30px;
+                background: $brown;
+                color: $white;
+                letter-spacing: 0.05em;
+                font-weight: 550;
+                transition: ease-in-out;
+                transition-duration: 300ms;
+                animation-name: fadeIn;
+                animation-duration: 1s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 1;
+            }
+
+            a:hover{
+                background: darken($brown, 10%);
+            }
+       }
+
+       &-image{
+           &-content{
+               height: 100%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+
+            &-decoration{
+                position: absolute;
+                background: $silver;
+                width: 40%;
+                height: 55%;
+                top: 24%;
+                right: 4%;
+                z-index: 0;
+            }
+
+            img{
+                width: 80%;
+                z-index: 1;
+            }
+           }
+       }
+   }
+
+   .about-us{
+       height: 80vh;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: 15% auto;
+       grid-template-areas: 
+       "header header"
+       "content slideshow";
+
+       &-header{
+           grid-area: header;
+           
+           h2{
+               display: flex;
+               justify-content: start;
+               align-items: center;
+               width: 38%;
+               height: 100%;
+               margin-left: 1.2em;
+               font-family: 'Tangerine';
+               font-size: 5em;
+               letter-spacing: 0.1em;
+               border-bottom: 2px $dark-black solid;
+           }
+       }
+
+       &-paragraph{
+           grid-area: content;
+           p{
+               width: 75%;
+               margin-left: 4.3em;
+               margin-top: 2em;
+               font-size: 1.4em;
+               text-align: start;
+               line-height: 1.3;
+           }
+       }
+
+       &-slideshow{
+           grid-area: slideshow;
+           display: flex;
+           justify-content: center;
+           align-items: flex-start;
+
+           &-div{
+               height: 82%;
+               width: 80%;
+            //    background: url('../images/slideshow2.jpg');
+            //    background-size: cover;
+            //    background-repeat: no-repeat;
+            //    background-position: center;
+               animation: ease-in-out;
+               animation-iteration-count: 1;
+               animation-duration: 2s;
+
+               @keyframes fadeInDiv{
+                    from{
+                        background: url('../images/slideshow2.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 0;
+                    }
+ 
+                    to{
+                        background: url('../images/slideshow2.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes fadeOutDiv{
+                    from{
+                        background: url('../images/slideshow2.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 1;
+                    }
+ 
+                    to{
+                        background: url('../images/slideshow2.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 0;
+                    }
+                }
+
+                @keyframes fadeInDiv2{
+                    from{
+                        background: url('../images/slideshow3.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 0;
+                    }
+ 
+                    to{
+                        background: url('../images/slideshow3.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes fadeOutDiv2{
+                    from{
+                        background: url('../images/slideshow3.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 1;
+                    }
+ 
+                    to{
+                        background: url('../images/slideshow3.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 0;
+                    }
+                }
+
+                @keyframes fadeInDiv3{
+                    from{
+                        background: url('../images/slideshow1.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 0;
+                    }
+ 
+                    to{
+                        background: url('../images/slideshow1.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes fadeOutDiv3{
+                    from{
+                        background: url('../images/slideshow1.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 1;
+                    }
+ 
+                    to{
+                        background: url('../images/slideshow1.jpg');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        opacity: 0;
+                    }
+                }
+           }
+       }
+
+       &-decoration-one{
+           position: absolute;
+           top: 157vh;
+           left: 20vw;
+           border-radius: 50%;
+           height: 20%;
+           width: 10%;
+           background: #aa896b;
+           background: $medium-black;
+           background: $silver;
+           opacity: 0.4;
+           z-index: -1;
+       }
+   }
+
+   .menu{
+       height: 105vh;
+       width: 100%;
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: 13% 10% auto;
+
+       &-header{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           h2{
+               width: 20%;
+               font-size: 5em;
+               font-family: 'Tangerine';
+               letter-spacing: 0.1em;
+               text-align: center;
+               border-bottom: 2px $dark-black solid;
+           }
+       }
+
+       &-navigation{
+           display: flex;
+           justify-content: center;
+           margin-top: 0.5em;
+
+           &-choice{
+               height: 100%;
+               width: 20%;
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               align-items: center;
+            //    display: none;
+
+               &-food{
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: center;
+                   align-items: center;
+                   height: 100%;
+
+                   i{
+                       text-align: center;
+                        width: 40%;
+                       font-size: 4em;
+                       cursor: pointer;
+                       color: $dark-black;
+                       padding: 0.3em;
+                       margin-top: -0.2em;
+                   }
+
+                    i:hover{
+                        box-shadow: 3px 3px 3px 4px $silver;
+                        color: $medium-black;
+                    }
+
+                    h4{
+                        font-size: 1.5em;
+                        color: $dark-black;
+                        padding-top: 0.3em;
+                    }
+               }
+
+               &-drinks{
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: center;
+                   align-items: center;
+                   height: 100%;
+
+                   i{
+                       text-align: center;
+                       width: 40%;
+                       font-size: 4em;
+                       cursor: pointer;
+                       color: $dark-black;
+                       padding: 0.3em;
+                       margin-top: -0.2em;
+                    }
+                    
+                    i:hover{
+                        box-shadow: 3px 3px 3px 4px $silver;
+                        color: $medium-black;
+                   }
+
+                   h4{
+                       font-size: 1.5em;
+                       color: $dark-black;
+                       padding-top: 0.3em;
+                   }
+               }
+           }
+
+           &-food{
+               height: 100%;
+               width: 50%;
+               display: grid;
+               grid-template-columns: repeat(5,1fr);
+               display: none;
+
+               &-undo{
+                   display: flex;
+                   flex-direction: column;
+                   text-align: center;
+                   align-items: center;
+                   justify-content: center;
+
+                   i{
+                       font-size: 3em;
+                       padding: 0.4em;
+                       color: $dark-black;
+                       cursor: pointer;
+                   }
+
+                   i:hover{
+                        box-shadow: 3px 3px 3px 4px $silver;
+                        color: $medium-black;
+                   }
+
+                   h4{
+                       margin-top: 0.4em;
+                       font-size: 1.5em;
+                       color: $dark-black;
+                   }
+               }
+
+               &-burgers{
+                   display: flex;
+                   flex-direction: column;
+                   text-align: center;
+                   align-items: center;
+                   justify-content: center;
+
+                   i{
+                       font-size: 3em;
+                       padding: 0.4em;
+                       color: $dark-black;
+                       cursor: pointer;
+                   }
+
+                   i:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                    color: $medium-black;
+                    }
+
+                    h4{
+                        margin-top: 0.4em;
+                        font-size: 1.5em;
+                        color: $dark-black;
+                    }
+                }
+
+               &-pizza{
+                   display: flex;
+                   flex-direction: column;
+                   text-align: center;
+                   align-items: center;
+                   justify-content: center;
+
+                   i{
+                       font-size: 3em;
+                       padding: 0.4em;
+                       color: $dark-black;
+                       cursor: pointer;
+                   }
+
+                   i:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                    color: $medium-black;
+                    }
+
+                    h4{
+                        margin-top: 0.4em;
+                        font-size: 1.5em;
+                        color: $dark-black;
+                    }
+               }
+
+               &-house-specials{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+
+                    i{
+                        font-size: 3em;
+                        padding: 0.4em;
+                        color: $dark-black;
+                        cursor: pointer;
+                    }
+
+                    i:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                    color: $medium-black;
+                    }
+
+                    h4{
+                        margin-top: 0.4em;
+                        font-size: 1.5em;
+                        color: $dark-black;
+                    }
+               }
+
+               &-meat{
+                   display: flex;
+                   flex-direction: column;
+                   text-align: center;
+                   align-items: center;
+                   justify-content: center;
+
+                   i{
+                       font-size: 3em;
+                       padding: 0.4em;
+                       color: $dark-black;
+                       cursor: pointer;
+                   }
+
+                   i:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                    color: $medium-black;
+                    }
+
+                    h4{
+                        margin-top: 0.4em;
+                        font-size: 1.5em;
+                        color: $dark-black;
+                    }
+               }
+           }
+
+           &-drinks{
+               height: 100%;
+               width: 50%;
+               display: grid;
+               grid-template-columns: repeat(6, 1fr);
+               display: none;
+
+               &-undo{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+                i{
+                    width: 40%;
+                    font-size: 3em;
+                    padding: 0.4em;
+                    color: $dark-black;
+                    cursor: pointer;
+                }
+
+                i:hover{
+                 box-shadow: 3px 3px 3px 4px $silver;
+                 color: $medium-black;
+                 }
+
+                 h4{
+                     margin-top: 0.4em;
+                     font-size: 1.5em;
+                     color: $dark-black;
+                 }
+               }
+
+               &-coffee{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+                i{
+                    width: 40%;
+                    font-size: 3em;
+                    padding: 0.4em;
+                    color: $dark-black;
+                    cursor: pointer;
+                }
+
+                i:hover{
+                 box-shadow: 3px 3px 3px 4px $silver;
+                 color: $medium-black;
+                 }
+
+                 h4{
+                     margin-top: 0.4em;
+                     font-size: 1.5em;
+                     color: $dark-black;
+                 }
+               }
+
+               &-beer{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+                i{
+                    width: 40%;
+                    font-size: 3em;
+                    padding: 0.4em;
+                    color: $dark-black;
+                    cursor: pointer;
+                }
+
+                i:hover{
+                 box-shadow: 3px 3px 3px 4px $silver;
+                 color: $medium-black;
+                 }
+
+                 h4{
+                     margin-top: 0.4em;
+                     font-size: 1.5em;
+                     color: $dark-black;
+                 }
+               }
+
+               &-wine{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+                i{
+                    width: 40%;
+                    font-size: 3em;
+                    padding: 0.4em;
+                    color: $dark-black;
+                    cursor: pointer;
+                }
+
+                i:hover{
+                 box-shadow: 3px 3px 3px 4px $silver;
+                 color: $medium-black;
+                 }
+
+                 h4{
+                     margin-top: 0.4em;
+                     font-size: 1.5em;
+                     color: $dark-black;
+                 }
+               }
+
+               &-cocktails{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+                i{
+                    width: 40%;
+                    font-size: 3em;
+                    padding: 0.4em;
+                    color: $dark-black;
+                    cursor: pointer;
+                }
+
+                i:hover{
+                 box-shadow: 3px 3px 3px 4px $silver;
+                 color: $medium-black;
+                 }
+
+                 h4{
+                     margin-top: 0.4em;
+                     font-size: 1.5em;
+                     color: $dark-black;
+                 }
+               }
+
+               &-hard{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+
+                i{
+                    width: 40%;
+                    font-size: 3em;
+                    padding: 0.4em;
+                    color: $dark-black;
+                    cursor: pointer;
+                }
+
+                i:hover{
+                 box-shadow: 3px 3px 3px 4px $silver;
+                 color: $medium-black;
+                }
+                
+                h4{
+                    margin-top: 0.4em;
+                    font-size: 1.5em;
+                    color: $dark-black;
+                }
+            }
+        }
+        }
+        
+        &-items{
+           margin-top: 1.5em;
+           
+           &-house-specials{
+               width: 90%;
+               height: 100%;
+               margin: 0 auto;
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               grid-gap: 1em;
+               padding: 1em;
+               
+               &-burek{
+                   display: grid;
+                   grid-template-columns: 75% auto;
+                   align-items: center;
+                   cursor: pointer;
+                   padding: 1em;                   
+                   padding-right: 0em;
+
+                   &-content{
+                       
+                       h4{
+                           font-size: 2.5em;
+                           margin-bottom: 0.3em;
+                           font-family: 'Tangerine';
+                           letter-spacing: 0.1em;
+                        }
+                        
+                        p{
+                            text-align: justify;
+                        }
+                    }
+
+                    &-price{
+                        text-align: center;
+                        font-size: 1.8em;
+                        letter-spacing: 0.05em;
+                        letter-spacing: 0.1em;
+                    }
+               }
+               
+               &-burek:hover{
+                   box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-sirnica{
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                   padding-right: 0em;
+
+                    &-content{
+                       
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-sirnica:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-zeljanica{
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                   padding-right: 0em;
+
+                    &-content{
+                       
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-zeljanica:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-bamije{
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                   padding-right: 0em;
+
+                    &-content{
+                       
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-bamije:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-salmon{
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                   padding-right: 0em;
+
+                    &-content{
+                       
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-salmon:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-cevapcici{
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                   padding-right: 0em;
+
+                    &-content{
+                       
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-cevapcici:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-baklava{
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                   padding-right: 0em;
+
+                    &-content{
+                       
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-baklava:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-begova-soup{
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                   padding-right: 0em;
+
+                    &-content{
+                       
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-begova-soup:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-satarash{
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                   padding-right: 0em;
+
+                    &-content{
+                       
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-satarash:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-bosanski-lonac{
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                   padding-right: 0em;
+
+                    &-content{
+                       
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-bosanski-lonac:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-tarhana{
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                   padding-right: 0em;
+
+                    &-content{
+                       
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-tarhana:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+           }
+
+           &-burgers{
+               height: 100%;
+               width: 90%;
+               margin: 0 auto;
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               grid-template-rows: repeat(4,1fr);
+               grid-gap: 1em;
+               padding: 1em;
+               display: none;
+
+               &-hamburger{
+                   background: $white;
+                   display: grid;
+                   grid-template-columns: 75% auto;
+                   align-items: center;
+                   cursor: pointer;
+                   padding: 1em;                   
+                   padding-right: 0em;
+
+                   &-content{
+                       
+                       h4{
+                           font-size: 2.5em;
+                           margin-bottom: 0.3em;
+                           font-family: 'Tangerine';
+                           letter-spacing: 0.1em;
+                        }
+                        
+                        p{
+                            text-align: justify;
+                        }
+                    }
+
+                    &-price{
+                        text-align: center;
+                        font-size: 1.8em;
+                        letter-spacing: 0.05em;
+                        letter-spacing: 0.1em;
+                    }
+                }
+                
+                &-hamburger:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+            
+                &-cheeseburger{
+                    background: $white;
+                   display: grid;
+                   grid-template-columns: 75% auto;
+                   align-items: center;
+                   cursor: pointer;
+                   padding: 1em;                   
+                   padding-right: 0em;
+
+                   &-content{
+                       
+                       h4{
+                           font-size: 2.5em;
+                           margin-bottom: 0.3em;
+                           font-family: 'Tangerine';
+                           letter-spacing: 0.1em;
+                        }
+                        
+                        p{
+                            text-align: justify;
+                        }
+                    }
+
+                    &-price{
+                        text-align: center;
+                        font-size: 1.8em;
+                        letter-spacing: 0.05em;
+                        letter-spacing: 0.1em;
+                    }
+                }
+
+                &-cheeseburger:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+                
+                &-fish-burger{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                       h4{
+                           font-size: 2.5em;
+                           margin-bottom: 0.3em;
+                           font-family: 'Tangerine';
+                           letter-spacing: 0.1em;
+                        }
+                        
+                        p{
+                            text-align: justify;
+                        }
+                    }
+                    
+                    &-price{
+                        text-align: center;
+                        font-size: 1.8em;
+                        letter-spacing: 0.05em;
+                        letter-spacing: 0.1em;
+                    }
+                }
+                
+                &-fish-burger:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+                
+                &-vegan-burger{
+                    background: $white;
+                    display: grid;
+                   grid-template-columns: 75% auto;
+                   align-items: center;
+                   cursor: pointer;
+                   padding: 1em;                   
+                   padding-right: 0em;
+                   
+                   &-content{
+                       
+                       h4{
+                           font-size: 2.5em;
+                           margin-bottom: 0.3em;
+                           font-family: 'Tangerine';
+                           letter-spacing: 0.1em;
+                        }
+                        
+                        p{
+                            text-align: justify;
+                        }
+                    }
+
+                    &-price{
+                        text-align: center;
+                        font-size: 1.8em;
+                        letter-spacing: 0.05em;
+                        letter-spacing: 0.1em;
+                    }
+                }
+                
+                &-vegan-burger:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+                
+                &-double-hamburger{
+                    background: $white;
+                    display: grid;
+                   grid-template-columns: 75% auto;
+                   align-items: center;
+                   cursor: pointer;
+                   padding: 1em;                   
+                   padding-right: 0em;
+                   
+                   &-content{
+                       
+                       h4{
+                           font-size: 2.5em;
+                           margin-bottom: 0.3em;
+                           font-family: 'Tangerine';
+                           letter-spacing: 0.1em;
+                        }
+                        
+                        p{
+                            text-align: justify;
+                        }
+                    }
+                    
+                    &-price{
+                        text-align: center;
+                        font-size: 1.8em;
+                        letter-spacing: 0.05em;
+                        letter-spacing: 0.1em;
+                    }
+                }
+                
+                &-double-hamburger:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+                
+                &-double-cheeseburger{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+
+                   &-content{
+                       
+                       h4{
+                           font-size: 2.5em;
+                           margin-bottom: 0.3em;
+                           font-family: 'Tangerine';
+                           letter-spacing: 0.1em;
+                        }
+                        
+                        p{
+                            text-align: justify;
+                        }
+                    }
+
+                    &-price{
+                        text-align: center;
+                        font-size: 1.8em;
+                        letter-spacing: 0.05em;
+                        letter-spacing: 0.1em;
+                    }
+                }
+                
+                &-double-cheeseburger:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+           }
+
+           &-pizza{
+                height: 100%;
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 1em;
+                grid-gap: 1em;
+                display: none;
+
+                &-margherita{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-margherita:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-fungi{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-fungi:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-tono{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-tono:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-vegetariana{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-vegetariana:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-quatro-formagi{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-quatro-formagi:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-italiana{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-italiana:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-balkan{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-balkan:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-salami{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-salami:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+           }
+
+           &-meat{
+                height: 100%;
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 1em;
+                grid-gap: 1em;
+                display: none;
+
+                &-steak{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-steak:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-elk{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-elk:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-rabbit{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-rabbit:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-calf{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-calf:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-goat{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-goat:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-shark{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-shark:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-pork{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-pork:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-chicken{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-chicken:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+           }
+
+           &-coffee{
+                height: 100%;
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 1em;
+                grid-gap: 1em;
+                display: none;
+
+                &-espresso{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-espresso:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-espresso-milk{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-espresso-milk:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-turkish{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-turkish:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-ness{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-ness:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-longi{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-longi:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-latte{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-latte:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-machiato{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+ 
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                         }
+                         
+                         p{
+                             text-align: justify;
+                         }
+                     }
+ 
+                     &-price{
+                         text-align: center;
+                         font-size: 1.8em;
+                         letter-spacing: 0.05em;
+                         letter-spacing: 0.1em;
+                     }
+                }
+
+                &-machiato:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+            }
+            
+           &-beer{
+               height: 100%;
+               width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 1em;
+                grid-gap: 1em;
+                display: none;
+                
+                &-heineken{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+                    
+                &-heineken:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+                
+                &-corona{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                        p{
+                             text-align: justify;
+                            }
+                        }
+                        
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+                
+                &-corona:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-guinness{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-guinness:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-budweiser{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-budweiser:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-bud-light{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-bud-light:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-becks{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-becks:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-paulaner{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-paulaner:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-paulaner-dark{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-paulaner-dark:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+           }
+
+           &-wine{
+                height: 100%;
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 1em;
+                grid-gap: 1em;
+                display: none;
+
+                &-casella{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-casella:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-changyu{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-changyu:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-robert-mondavi{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-robert-mondavi:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-trinchero{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-trinchero:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-hardys{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-hardys:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-diablo{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-diablo:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-echo{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-echo:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+           }
+
+           &-cocktails{
+                height: 100%;
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 1em;
+                grid-gap: 1em;
+                display: none;
+
+                &-dry-martini{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-dry-martini:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-margarita{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-margarita:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-manhattan{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-manhattan:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-carapinia{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-carapinia:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-moscow-mule{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-moscow-mule:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-aviation{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-aviation:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-cosmopolitan{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-cosmopolitan:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-amaretto{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-amaretto:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-vodka-martini{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-vodka-martini:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+           }
+
+           &-hard-liquor{
+                height: 100%;
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 1em;
+                grid-gap: 1em;
+                display: none;
+
+                &-vodka{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-vodka:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-gin{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-gin:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-rakija{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-rakija:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-whiskey{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-whiskey:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-jagermeister{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-jagermeister:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-malibu{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-malibu:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+
+                &-bacardi{
+                    background: $white;
+                    display: grid;
+                    grid-template-columns: 75% auto;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1em;                   
+                    padding-right: 0em;
+                    
+                    &-content{
+                        
+                        h4{
+                            font-size: 2.5em;
+                            margin-bottom: 0.3em;
+                            font-family: 'Tangerine';
+                            letter-spacing: 0.1em;
+                        }
+                        
+                         p{
+                             text-align: justify;
+                            }
+                        }
+ 
+                        &-price{
+                            text-align: center;
+                            font-size: 1.8em;
+                            letter-spacing: 0.05em;
+                            letter-spacing: 0.1em;
+                        }
+                }
+
+                &-bacardi:hover{
+                    box-shadow: 3px 3px 3px 4px $silver;
+                }
+           }
+       }
+   }
+
+   .gallery{
+       height: 100vh;
+       width: 100%;
+       margin-top: 20em;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+       &-content{
+           width: 90%;
+           height: 90%;
+           background: $white;
+           display: grid;
+           grid-template-columns: repeat(3, 1fr);
+           grid-gap: 2em;
+
+           &-photo{
+               background: $medium-black;
+               transition: ease-in-out;
+               transition-duration: 1000ms;
+           }
+       }
+   }
+
+   .reservations{
+       position: relative;
+       margin-top: 5em;
+       height: 100vh;
+       display: grid;
+       grid-template-rows: 15% 85%;
+
+       &-decoration-one{
+           position: absolute;
+           width: 20%;
+           height: 35%;
+           border-radius: 50%;
+           background: $brown;
+           background: lighten($brown, 43%);
+           left: 5%;
+           top: 5%;
+           z-index: -1;
+       }
+
+       &-decoration-two{
+           position: absolute;
+           width: 20%;
+           height: 35%;
+           border-radius: 50%;
+           background: lighten($brown, 43%);
+           right: 5%;
+           top: 5%;
+           z-index: -1;
+        }
+
+        &-firstname-help{
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 15%;
+            left: 18%;
+            box-shadow: 3px 3px 3px 4px $silver;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+            p{
+                font-size: 1.1em;
+                color: $dark-black;
+                color: $medium-black;
+                font-weight: bold;
+                letter-spacing: 0.02em;
+            }
+        }
+
+        &-lastname-help{
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 15%;
+            right: 18%;
+            box-shadow: 3px 3px 3px 4px $silver;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            
+            p{
+                font-size: 1.1em;
+                color: $dark-black;
+                color: $medium-black;
+                font-weight: bold;
+                letter-spacing: 0.02em;
+            }
+        }
+        
+        &-adults-help{
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 27%;
+            left: 18%;
+            box-shadow: 3px 3px 3px 4px $silver;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+            p{
+                font-size: 1.1em;
+                color: $dark-black;
+                color: $medium-black;
+                font-weight: bold;
+                letter-spacing: 0.02em;
+            }
+        }
+
+        &-children-help{
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 27%;
+            right: 18%;
+            box-shadow: 3px 3px 3px 4px $silver;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+            p{
+                font-size: 1.1em;
+                color: $dark-black;
+                color: $medium-black;
+                font-weight: bold;
+                letter-spacing: 0.02em;
+            }
+        }
+
+        &-time-help{
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 43%;
+            left: 18%;
+            box-shadow: 3px 3px 3px 4px $silver;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+            p{
+                font-size: 1.1em;
+                color: $dark-black;
+                color: $medium-black;
+                font-weight: bold;
+                letter-spacing: 0.02em;
+            }
+        }
+
+        &-comments-help{
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 60%;
+            left: 18%;
+            box-shadow: 3px 3px 3px 4px $silver;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: none;
+
+            p{
+                font-size: 1.1em;
+                color: $dark-black;
+                color: $medium-black;
+                font-weight: bold;
+                letter-spacing: 0.02em;
+            }
+        }
+
+       &-header{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           h2{
+               width: 25%;
+                font-size: 5em;
+                font-family: 'Tangerine';
+                letter-spacing: 0.1em;
+                text-align: center;
+                border-bottom: 2px $dark-black solid;
+           }
+       }
+
+       form{
+           width: 30%;
+           height: 90%;
+           margin: 0 auto;
+           margin-top: 0.5em;
+           display: grid;
+           grid-template-rows: 18% 18% 18% 36% 10%;
+           box-shadow: 3px 3px 3px 4px $silver;
+           padding: 1em 1.3em;
+
+           .form-fullname{
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+
+               &-firstname{
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: center;
+                   align-items: center;
+
+                   label{
+                       font-size: 1.7em;
+                       margin-top: -1em;
+                       margin-right: 5em;
+                       margin-bottom: 0.4em;
+                       letter-spacing: 0.05em;
+                       color: $medium-black;
+                       color: $dark-black;
+                   }
+
+                   input{
+                       font-size: 1.2em;
+                       padding: 0.4em;
+                       border: 2px $silver solid;
+                       border: 2px darken($silver, 5%) solid;
+                   }
+
+                   input:focus{
+                       border: none;
+                       border: 2px $silver solid;
+                       outline: none;
+                       background: darken($white, 2%);
+                   }
+               }
+
+               &-lastname{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    label{
+                        font-size: 1.7em;
+                        margin-top: -1em;
+                        margin-bottom: 0.4em;
+                        letter-spacing: 0.05em;
+                        color: $medium-black;
+                        color: $dark-black;
+                        margin-right: 5em;
+                    }
+
+                    input{
+                        font-size: 1.2em;
+                        padding: 0.4em;
+                        border: 2px $silver solid;
+                        border: 2px darken($silver, 5%) solid;
+                    }
+
+                    input:focus{
+                        border: none;
+                        border: 2px $silver solid;
+                        outline: none;
+                        background: darken($white, 2%);
+                    }
+               }
+           }
+
+           .form-more-information{
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+
+               &-adults{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    label{
+                        font-size: 1.7em;
+                        margin-top: -1em;
+                        margin-bottom: 0.4em;
+                        letter-spacing: 0.05em;
+                        color: $medium-black;
+                        color: $dark-black;
+                        margin-right: 6.5em;
+                    }
+
+                    input{
+                        font-size: 1.2em;
+                        padding: 0.4em;
+                        border: 2px $silver solid;
+                        border: 2px darken($silver, 5%) solid;
+                    }
+
+                    input:focus{
+                        border: none;
+                        border: 2px $silver solid;
+                        outline: none;
+                        background: darken($white, 2%);
+                    }
+               }
+
+               &-children{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    label{
+                        font-size: 1.7em;
+                        margin-top: -1em;
+                        margin-bottom: 0.4em;
+                        letter-spacing: 0.05em;
+                        color: $medium-black;
+                        color: $dark-black;
+                        margin-right: 5.5em;
+                    }
+
+                    input{
+                        font-size: 1.2em;
+                        padding: 0.4em;
+                        border: 2px $silver solid;
+                        border: 2px darken($silver, 5%) solid;
+                    }
+
+                    input:focus{
+                        border: none;
+                        border: 2px $silver solid;
+                        outline: none;
+                        background: darken($white, 2%);
+                    }
+               }
+
+           }
+
+           .form-time-date{
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+
+               &-time{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    label{
+                        font-size: 1.7em;
+                        margin-top: -1em;
+                        margin-bottom: 0.4em;
+                        letter-spacing: 0.05em;
+                        color: $medium-black;
+                        color: $dark-black;
+                        margin-right: 7.5em;
+                    }
+
+                    input{
+                        font-size: 1.2em;
+                        padding: 0.4em;
+                        border: 2px $silver solid;
+                        border: 2px darken($silver, 5%) solid;
+                    }
+
+                    input:focus{
+                        border: none;
+                        border: 2px $silver solid;
+                        outline: none;
+                        background: darken($white, 2%);
+                    }
+               }
+
+               &-date{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    label{
+                        font-size: 1.7em;
+                        margin-top: -1em;
+                        margin-bottom: 0.4em;
+                        letter-spacing: 0.05em;
+                        color: $medium-black;
+                        color: $dark-black;
+                        margin-right: 7.5em;
+                    }
+
+                    input{
+                        font-size: 1.2em;
+                        padding: 0.4em;
+                        border: 2px $silver solid;
+                        border: 2px darken($silver, 5%) solid;
+                        width: 85%;
+                    }
+
+                    input:focus{
+                        border: none;
+                        border: 2px $silver solid;
+                        outline: none;
+                        background: darken($white, 2%);
+                    }
+               }
+           }
+
+           .form-comment{
+
+               &-textarea{
+                   display: grid;
+                   grid-template-rows: 20% 80%;
+                   height: 100%;
+                   text-align: center;
+
+                   label{
+                       margin-top: -0.2em;
+                        font-size: 1.7em;
+                        margin-bottom: 0.4em;
+                        letter-spacing: 0.05em;
+                        color: $dark-black;
+                   }
+
+                   textarea{
+                       resize: none;
+                       width: 93%;
+                       height: 90%;
+                       margin: 0 auto;
+                       margin-top: -1.2em;
+                       font-size: 1.2em;
+                        padding: 0.4em;
+                        border: 2px $silver solid;
+                        border: 2px darken($silver, 5%) solid;
+                   }
+
+                   textarea:focus{
+                        border: none;
+                        border: 2px $silver solid;
+                        outline: none;
+                        background: darken($white, 2%);
+                   }
+               }
+           }
+
+           .form-finish{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+
+               &-button{
+                   width: 95%;
+
+                   input{
+                       margin-top: -1em;
+                       font-size: 1.8em;
+                       padding: 0.3em 0.5em;
+                       cursor: pointer;
+                       width: 100%;
+                       background: $brown;
+                       color: $white;
+                       outline: none;
+                       border: none;
+                       border: 2px $silver solid;
+                       transition: ease-in-out;
+                       transition-duration: 400ms;
+                       letter-spacing: 0.03em;
+                   }
+
+                   input:focus, input:hover{
+                       outline: none;
+                       background: darken($brown, 10%);
+                   }
+               }
+           }
+       }
+
+       .post-reservation{
+           margin: 0 auto;
+           width: 40%;
+           height: 90%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           display: none;
+
+           &-content{
+               height: 100%;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               height: 70%;
+               width: 90%;
+               box-shadow: 3px 3px 3px 4px $silver;
+
+               &-icon{
+                   i{
+                       color: $dark-black;
+                       font-size: 5em;
+                       border: 3px $dark-black solid;
+                       border-radius: 50%;
+                       padding: 0.5em;
+                   }
+               }
+
+               &-message{
+                   h4{
+                       margin-top: 1em;
+                       font-size: 3em;
+                       letter-spacing: 0.05em;
+                       color: $dark-black;
+                   }
+               }
+           }
+       }
+   }
+
+   .contact{
+       margin-top: 5em;
+       height: 90vh;
+       width: 100%;
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 15% 85%;
+       grid-template-areas: 
+       "header header"
+       "form maps";
+
+       &-header{
+           grid-area: header;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           h2{
+                width: 15%;
+                font-size: 5em;
+                font-family: 'Tangerine';
+                letter-spacing: 0.1em;
+                text-align: center;
+                border-bottom: 2px $dark-black solid;
+            }
+       }
+
+       form{
+        grid-area: form;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .contact-form{
+            height: 80%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 3px 3px 3px 4px $silver;
+
+            &-firstname{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1.5em;
+
+                label{
+                    font-size: 1.7em;
+                    color: $dark-black;
+                    margin-right: 5.5em;
+                    margin-bottom: 0.3em;
+                }
+
+                input{
+                    font-size: 1.3em;
+                    padding: 0.3em;
+                    outline: none;
+                    border: 2px $silver solid;
+                }
+
+                input:focus{
+                    border: 2px $medium-black solid;
+                }
+
+            }
+
+            &-lastname{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1.5em;
+
+                label{
+                    font-size: 1.7em;
+                    color: $dark-black;
+                    margin-right: 5.5em;
+                    margin-bottom: 0.3em;
+                }
+
+                input{
+                    font-size: 1.3em;
+                    padding: 0.3em;
+                    outline: none;
+                    border: 2px $silver solid;
+                }
+
+                input:focus{
+                    border: 2px $medium-black solid;
+                }
+            }
+
+            &-email{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1.5em;
+
+                label{
+                    font-size: 1.7em;
+                    color: $dark-black;
+                    margin-right: 7em;
+                    margin-bottom: 0.3em;
+                }
+
+                input{
+                    font-size: 1.3em;
+                    padding: 0.3em;
+                    outline: none;
+                    border: 2px $silver solid;
+                }
+
+                input:focus{
+                    border: 2px $medium-black solid;
+                }
+            }
+
+            &-continue{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                button{
+                    border: 2px $silver solid;
+                    background: $brown;
+                    color: $white;
+                    font-size: 1.7em;
+                    width: 55%;
+                    padding: 0.4em;
+                    cursor: pointer;
+                    outline: none;
+                    transition: ease-in-out;
+                    transition-duration: 300ms;
+                }
+
+                button:hover{
+                    background: darken($brown, 10%);
+                }
+            }
+        }
+
+        .contact-comment{
+            height: 80%;
+            width: 50%;
+            display: grid;
+            grid-template-rows: 85% 15%;
+            box-shadow: 3px 3px 3px 4px $silver;
+            display: none;
+
+            &-textarea{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                label{
+                    font-size: 1.7em;
+                    color: $dark-black;
+                    margin-top: 1.5em;
+                }
+
+                textarea{
+                    resize: none;
+                    width: 80%;
+                    height: 70%;
+                    padding: 0.5em;
+                    font-size: 1.3em;
+                    margin: 0 auto;
+                    margin-top: 1.5em;
+                    outline: none;
+                    border: 2px $silver solid;
+                }
+
+                textarea:focus{
+                    border: 2px $medium-black solid;
+                }
+            }
+
+            &-finish{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                input{
+                    font-size: 1.7em;
+                    background: $brown;
+                    border: none;
+                    outline: none;
+                    color: $white;
+                    padding: 0.5em;
+                    margin-top: -1em;
+                    width: 85%;
+                    border: 2px $silver solid;
+                    cursor: pointer;
+                    transition: ease-in-out;
+                    transition-duration: 300ms;
+                }
+
+                input:focus, input:hover{
+                    background: darken($brown, 10%);
+                }
+            }
+        }
+        
+        .contact-completed{
+            height: 80%;
+            width: 50%;
+            box-shadow: 3px 3px 3px 4px $silver;
+            display: none;
+
+            &-content{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &-icon{
+
+                    i{
+                        font-size: 5em;
+                    padding: 0.5em;
+                    border: 2px $medium-black solid;
+                    border-radius: 50%;
+                    color: $medium-black;
+                    }
+                }
+
+                &-message{
+                    h4{
+                        font-size: 3em;
+                        color: $medium-black;
+                        margin-top: 0.5em;
+                    }
+                }
+            }
+        }
+
+       }
+
+       &-map{
+           grid-area: maps;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           iframe{
+               height: 80%;
+               width: 80%;
+               box-shadow: 3px 3px 3px 4px $silver;
+           }
+       }
+   }
+}
